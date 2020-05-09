@@ -18,7 +18,7 @@ namespace Clase5LayoutsValidaciones.Models
         public string Avatar { get; set; }
 
         [Required(ErrorMessage = "Requerido")]
-        [EmailAddress]
+        [EmailAddress(ErrorMessage = "Formato de email invalido")]
         [CustomValidation(typeof(Usuario), "ValidarEmailUnico")]
         public string Email { get; set; }
 

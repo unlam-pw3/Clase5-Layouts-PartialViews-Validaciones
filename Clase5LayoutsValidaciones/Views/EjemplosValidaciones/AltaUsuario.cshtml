@@ -33,7 +33,8 @@
         Edad: @Html.EditorFor(o => o.Edad)
         @Html.ValidationMessageFor(o => o.Edad)
     </div>
-    @Html.ValidationSummary(false, "")
+    @*si queremos mostrar todos los errores de manera resumida, debemos remover los ValidationMessageFor individuales y solo dejar el ValidationSummary*@
+    @*@Html.ValidationSummary(false, "")*@
     <input type="submit" value="Crear" />
 
 </form>

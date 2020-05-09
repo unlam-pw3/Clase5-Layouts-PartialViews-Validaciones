@@ -23,7 +23,7 @@ Agregamos validaciones en la clase /Models/**Usuario** y hicimos un ejemplo de:
 + EmailAddress
 + RegularExpression
 + CustomValidation
-+ ValidationSummary
++ ValidationSummary, para que solo se vean los mensajes como resumen, debemos remover las llamadas a ValidationMessageFor individuales
 
 _Nota: Para habilitar las validaciones del lado del cliente (javascript), instalamos los paquetes de nuget jQuery.Validation y Microsoft.jQuery.Unobtrusive.Validation, luego incluimos en el html los scripts:_
 + <script src="~/Scripts/jquery-1.8.0.min.js"></script>
