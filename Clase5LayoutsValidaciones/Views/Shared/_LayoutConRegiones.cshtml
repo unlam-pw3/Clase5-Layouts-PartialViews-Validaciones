@@ -1,0 +1,14 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@Page.Title</title>
+    @RenderSection("head", required: false)
+</head>
+<body>
+    <div id="bodyObligatorio">
+        @RenderSection("bodyStart", required: true)
+    </div>
+    @RenderBody()
+    @RenderSection("bodyEnd", required: false)
+</body>
+</html>

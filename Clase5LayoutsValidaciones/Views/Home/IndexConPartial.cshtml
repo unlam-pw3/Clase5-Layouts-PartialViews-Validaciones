@@ -1,0 +1,27 @@
+﻿@model List<Clase5LayoutsValidaciones.Models.Comentario>
+@{
+    ViewBag.Title = "IndexConPartial";
+    Layout = "~/Views/Shared/_LayoutAnidado.cshtml";
+}
+
+<h2>IndexConPartial</h2>
+
+Comentarios:
+@foreach (Clase5LayoutsValidaciones.Models.Comentario comentario in Model)
+{
+    <p>@comentario.Mensaje</p>
+    Html.RenderPartial("~/Views/Home/_pvLinkUsuario.cshtml", comentario.Usuario);
+}
+
+
+
+
+@*<p>este es mi segundo comentario en este post</p>
+@{ Html.RenderPartial("~/Views/Home/_pvLinkUsuario.cshtml", Model);}
+
+<p>este es mi tercer comentario en este post</p>
+@{ Html.RenderPartial("~/Views/Home/_pvLinkUsuario.cshtml", Model);}
+
+<p>este es mi cuarto comentario en este post</p>
+@{ Html.RenderPartial("~/Views/Home/_pvLinkUsuario.cshtml", Model);}*@
+

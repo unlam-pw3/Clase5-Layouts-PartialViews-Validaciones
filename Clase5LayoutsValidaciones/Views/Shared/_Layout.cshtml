@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_Layout</title>
+</head>
+<body>
+    <div> 
+        <h1>LAYOUT</h1>
+        <div>
+            @{Html.RenderPartial("~/Views/Shared/_pvTopMenuLinks.cshtml");}
+            <h2>Empieza VISTA</h2>
+            @RenderBody()
+            <h2>Termina VISTA</h2>
+        </div>
+    </div>
+    @{Html.RenderPartial("~/Views/Shared/_pvFooter.cshtml");}
+</body>
+</html>

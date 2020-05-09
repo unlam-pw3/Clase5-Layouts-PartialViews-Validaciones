@@ -1,0 +1,40 @@
+﻿@model Clase5LayoutsValidaciones.Models.Usuario
+@{
+    ViewBag.Title = "AltaUsuario";
+    Layout = "~/Views/Shared/_LayoutAnidado.cshtml";
+}
+
+<h2>AltaUsuario</h2>
+<form action="/EjemplosValidaciones/AltaUsuario" method="post">
+
+    <div>
+        Nombre De Usuario: @Html.EditorFor(o => o.NombreDeUsuario)
+        @Html.ValidationMessageFor(o => o.NombreDeUsuario)
+    </div>
+
+    <div>
+        Email: @Html.EditorFor(o => o.Email)
+        @Html.ValidationMessageFor(o => o.Email)
+    </div>
+    <div>
+        Contraseña: @Html.PasswordFor(o => o.Contraseña)
+        @Html.ValidationMessageFor(o => o.Contraseña)
+    </div>
+    <div>
+        Re-ingrese Contraseña: @Html.PasswordFor(o => o.ReContraseña)
+        @Html.ValidationMessageFor(o => o.ReContraseña)
+    </div>
+    <div>
+        Url de Avatar: @Html.EditorFor(o => o.Avatar)
+        @Html.ValidationMessageFor(o => o.Avatar)
+    </div>
+
+    <div>
+        Edad: @Html.EditorFor(o => o.Edad)
+        @Html.ValidationMessageFor(o => o.Edad)
+    </div>
+    @Html.ValidationSummary(false, "")
+    <input type="submit" value="Crear" />
+
+</form>
+
